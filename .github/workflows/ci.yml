@@ -1,4 +1,4 @@
-name: Build Chatbot
+name: .NET CI Build
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v4
 
     - name: Setup .NET
@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: '6.0.x'
 
-    - name: Restore project
+    - name: Restore
       run: dotnet restore
 
-    - name: Build project
+    - name: Build
       run: dotnet build --configuration Release --no-restore
