@@ -47,7 +47,7 @@ namespace ai_chattt
             //then play the sound using the play methord 
             greett.Play();
 
-            Console.ReadLine();
+            
 
         }//End of greetings methord
 
